@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.center-heart {
+    width: 300px; /* Zwiększ rozmiar serca */
+    height: 300px; /* Zwiększ rozmiar serca */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background: none; /* Make the heart transparent */
+}
+
+.center-heart::before,
+.center-heart::after {
+    position: absolute;
+    content: "";
+    left: 75px; /* Dostosuj pozycję serca */
+    top: 0;
+    width: 70px; /* Dostosuj rozmiar serca */
+    height: 120px; /* Dostosuj rozmiar serca */
+    background: #e74c3c; /* Red color */
+    border-radius: 70px 70px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.center-heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+.image-viewer {
+    display: none; /* Ukryj image viewer domyślnie */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#nextButton {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
